@@ -4,7 +4,9 @@
   "description": "Este repositorio cuenta con todos los archivos desarrollados en el curso online de \"Coding Addict\" - Node and Express Tutorial",
   "main": "1-intro.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node 1-intro.js",
+    "dev": "nodemon 1-intro.js"
+
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/AgusBelP/Node_Intro/issues"
   },
-  "homepage": "https://github.com/AgusBelP/Node_Intro#readme"
+  "homepage": "https://github.com/AgusBelP/Node_Intro#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
