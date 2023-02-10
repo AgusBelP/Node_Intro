@@ -4,8 +4,8 @@
   "description": "Este repositorio cuenta con todos los archivos desarrollados en el curso online de \"Coding Addict\" - Node and Express Tutorial",
   "main": "1-intro.js",
   "scripts": {
-    "start": "node 1-intro.js",
-    "dev": "nodemon 1-intro.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
 
   },
   "repository": {
