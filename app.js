@@ -1,11 +1,16 @@
-const http = require('http')
+var http = require('http')
 
-const server = http.createServer((req,res) => {
-    console.log('request event');
-    res.end('Hello world')
+var fs = require('fs')
 
+http.createServer(function (req,res) {
+    /* const text = fs.readFileSync('./content/big_file.txt', 'utf-8')
+    res.end(text) */
+    const fileStream = fs.createReadStream('./content/big_file.txt', 'utf-8')
+    fileStream.on('open', () => {
+        fileStream.pipe(res)
+    })
+    fileStream.on('error', (err) => {
+            res.end(err);
+    })
 })
-
-server.listen(5000, () => {
-    console.log('Server listening on port: 5000...')
-})
+.listen(5000)

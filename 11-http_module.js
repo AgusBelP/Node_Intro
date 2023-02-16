@@ -1,6 +1,8 @@
 const { read } = require('fs');
 const http = require('http');
 
+//.end: This method signals to the server that all of the response headers and body have been sent; that server should consider this message complete. The method, response.end(), MUST be called on each response.
+
 const server = http.createServer((req,res)=>{
     if(req.url == '/'){
         res.end('Welcome to our homepage');
